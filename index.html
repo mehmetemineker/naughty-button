@@ -51,13 +51,13 @@
       const by =
         button.parentNode.offsetTop + button.offsetTop + button.offsetHeight / 2
 
-      document.addEventListener('mousemove', (event) => {
-        const radius = Math.max(
-          button.offsetWidth * 0.75,
-          button.offsetHeight * 0.75,
-          100,
-        )
+      const radius = Math.max(
+        button.offsetWidth * 0.75,
+        button.offsetHeight * 0.75,
+        100,
+      )
 
+      document.addEventListener('mousemove', (event) => {
         const dist = distanceBetween(event.clientX, event.clientY, bx, by)
         const angle = Math.atan2(event.clientY - by, event.clientX - bx)
 
